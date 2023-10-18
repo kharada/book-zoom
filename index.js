@@ -4,6 +4,12 @@ const moment = require('moment-timezone');
 const private_key = require('./pkey.json');
 const { google } = require('googleapis');
 
+/**
+ * HTTP function that handles a Zoom meeting booking and Google Calendar event creation.
+ *
+ * @param {Object} request - HTTP request object containing the request data.
+ * @param {Object} response - HTTP response object to send the response back to the client.
+ */
 exports.http = async (request, response) => {
   // Get parameters from env.
   const zoom_oauth_a = process.env.ZOOM_OAUTH_A;
